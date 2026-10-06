@@ -581,7 +581,7 @@ function scrollToId(id){document.getElementById(id)?.scrollIntoView({behavior:'s
    <div class="drawer-stat"><div><b>${fmt(x.count)}</b><span>casos</span></div><div><b>${pct(x.pct_dor)}</b><span>participação na dor</span></div></div>
    <div class="drawer-box"><strong>Dor associada</strong><p>${esc(x.dor)}</p></div>
    <div class="drawer-box"><strong>Teor do atendimento</strong><p>${esc(x.teor)}</p></div>
-   ${!isYes?`<div class="drawer-box executive-question"><strong>Pergunta executiva</strong><p>${esc(x.pergunta_executiva||buildExecutiveQuestion(x))}</p></div>`:''}<div class="drawer-box"><strong>${isYes?'Justificativa registrada na base':'Melhoria sugerida'}</strong><p>${esc(isYes?x.just:(x.melhoria||buildSuggestedImprovement(x)))}</p></div>
+   ${!isYes?`<div class="drawer-box executive-question"><strong>Pergunta</strong><p>${esc(x.pergunta_executiva||buildExecutiveQuestion(x))}</p></div>`:''}<div class="drawer-box"><strong>${isYes?'Justificativa registrada na base':'Melhoria sugerida'}</strong><p>${esc(isYes?x.just:(x.melhoria||buildSuggestedImprovement(x)))}</p></div>
    <button class="drawer-cta" onclick="openMatchingRecords('${(x.dor||'').replace(/'/g,"\'")}','${isYes?'Sim':'Não'}','${(x.cat||'').replace(/'/g,"\'")}')">Ver registro relacionado →</button>`;
    backdrop.classList.add('open');
  }
