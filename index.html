@@ -1,5 +1,8 @@
 <!doctype html>
 <html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="assets/images/hapvida-flor.png">
+<link rel="apple-touch-icon" href="assets/images/hapvida-flor.png">
+<meta name="theme-color" content="#000099">
 <title>Diagnóstico da Jornada • Análise e Estudo</title><style>
 :root{
  --blue:#000099;--blue2:#000099;--orange:#FF6600;--orange2:#FF6600;
@@ -16,7 +19,7 @@ a{color:inherit;text-decoration:none} button,input,select{font:inherit}
 .topbar{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.94);backdrop-filter:blur(16px);border-bottom:1px solid var(--line);height:64px;display:flex;align-items:center}
 .topbar-inner{width:min(1380px,92vw);margin:auto;display:flex;align-items:center;justify-content:space-between;gap:20px}
 .brand{display:flex;align-items:center;gap:11px;font-weight:800;color:var(--navy)}
-.brand-mark{width:35px;height:35px;border-radius:9px;background:var(--blue);color:#fff;display:grid;place-items:center;font-weight:900}
+.brand-mark{width:35px;height:35px;border-radius:9px;background:#fff;display:grid;place-items:center;overflow:hidden;padding:4px}.brand-mark img{width:100%;height:100%;object-fit:contain;display:block}
 .nav{display:flex;gap:5px;flex-wrap:wrap}
 .nav button{border:0;background:transparent;color:var(--muted);padding:8px 11px;border-radius:8px;cursor:pointer;font-size:12px;font-weight:700}
 .nav button:hover,.nav button.active{background:var(--softblue);color:var(--blue)}
@@ -182,7 +185,7 @@ body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;bac
 .visual-bars{display:grid;gap:10px;margin:0 0 18px}.visual-bar{display:grid;grid-template-columns:190px 1fr 60px;gap:10px;align-items:center;padding:8px 10px;border-radius:10px;cursor:pointer;transition:.22s}.visual-bar:hover{background:rgba(0,0,153,.045);transform:translateX(4px)}.visual-bar-label{font-size:10px;font-weight:900;color:#24324b}.visual-bar-track{height:9px;background:#edf0f5;border-radius:999px;overflow:hidden}.visual-bar-track i{display:block;height:100%;width:0;border-radius:999px;background:linear-gradient(90deg,#000099,#FF6600);transition:width 1s cubic-bezier(.2,.8,.2,1)}.visual-bar-value{text-align:right;font-size:11px;font-weight:900;color:#000099}.visual-bar-value small{display:block;font-size:9px;color:#718096;font-weight:750;margin-top:2px}
 .data-table tbody tr{cursor:pointer;transition:.18s}.data-table tbody tr:hover{background:rgba(0,0,153,.035)}
 .drawer-backdrop{position:fixed;inset:0;background:rgba(7,14,30,.42);backdrop-filter:blur(3px);z-index:100;opacity:0;pointer-events:none;transition:.25s}.drawer-backdrop.open{opacity:1;pointer-events:auto}.detail-drawer{position:fixed;right:0;top:0;height:100vh;width:min(520px,94vw);background:#fff;z-index:101;transform:translateX(105%);transition:.38s cubic-bezier(.2,.8,.2,1);box-shadow:-30px 0 70px rgba(0,0,0,.2);overflow:auto}.drawer-backdrop.open .detail-drawer{transform:translateX(0)}.drawer-head{position:sticky;top:0;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);padding:18px;border-bottom:1px solid #edf0f5;display:flex;justify-content:space-between;gap:12px;z-index:2}.drawer-close{border:0;background:#eef1f6;border-radius:9px;width:34px;height:34px;cursor:pointer;font-weight:900}.drawer-body{padding:20px}.drawer-tag{display:inline-flex;padding:6px 9px;border-radius:999px;background:rgba(0,0,153,.08);color:#000099;font-size:9px;font-weight:900}.drawer-body h3{font-size:22px;margin:10px 0}.drawer-stat{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:16px 0}.drawer-stat div{padding:13px;border-radius:12px;background:#f6f7fa}.drawer-stat b{display:block;font-size:20px;color:#000099}.drawer-stat span{font-size:9px;color:#718096}.drawer-box{padding:14px;border-radius:12px;background:#fafbfc;border:1px solid #edf0f5;margin-top:12px}.drawer-box strong{display:block;color:#111c32;font-size:10px;text-transform:uppercase;letter-spacing:.08em;margin-bottom:7px}.drawer-box p{font-size:11px;line-height:1.55;color:#526078;margin:0}.drawer-cta{margin-top:16px;width:100%;border:0;background:#000099;color:#fff;border-radius:11px;padding:12px;font-weight:900;cursor:pointer}.drawer-cta:hover{background:#FF6600}
-.presentation-mode{overflow:hidden;background:#f7f9fc}.presentation-mode .topbar,.presentation-mode .interactive-toolbar,.presentation-mode .footer,.presentation-mode > .container{display:none}.presentation-mode .hero,.presentation-mode .section{position:fixed;inset:0;width:100vw;min-height:100vh;height:100vh;box-sizing:border-box;padding:70px 0 112px;overflow:auto;scroll-margin-top:0;display:block!important;visibility:hidden;opacity:0;pointer-events:none;transform:translate3d(34px,0,0);transition:opacity .38s ease,transform .52s cubic-bezier(.22,.61,.36,1);will-change:transform,opacity}.presentation-mode .hero{align-items:center}.presentation-mode .hero.presentation-active,.presentation-mode .section.presentation-active{visibility:visible;opacity:1;pointer-events:auto;transform:translate3d(0,0,0);z-index:2}.presentation-mode .presentation-slide-leaving-next{visibility:visible;opacity:0;pointer-events:none;transform:translate3d(-34px,0,0)!important;z-index:1}.presentation-mode .presentation-slide-leaving-prev{visibility:visible;opacity:0;pointer-events:none;transform:translate3d(34px,0,0)!important;z-index:1}.presentation-mode .presentation-slide-enter-next{transform:translate3d(34px,0,0);}.presentation-mode .presentation-slide-enter-prev{transform:translate3d(-34px,0,0);}.presentation-mode .presentation-slide-inner{max-width:1180px;margin:0 auto}.presentation-controls{display:none;position:fixed;bottom:22px;left:50%;transform:translateX(-50%);z-index:120;background:rgba(255,255,255,.96);border:1px solid #e5e7eb;border-radius:999px;padding:8px;box-shadow:0 14px 50px rgba(0,0,0,.18);gap:6px;align-items:center;backdrop-filter:blur(10px)}.presentation-mode .presentation-controls{display:flex}.presentation-controls button{min-width:44px;height:40px;border:0;border-radius:999px;background:#000099;color:#fff;padding:8px 15px;font-weight:900;cursor:pointer;transition:transform .2s ease,box-shadow .2s ease}.presentation-controls button:hover{transform:translateY(-2px);box-shadow:0 8px 18px rgba(0,0,153,.18)}.presentation-controls button.secondary{background:#edf0f5;color:#000099}.presentation-controls .presentation-counter{padding:0 10px;font-size:12px;font-weight:900;color:#4b5563;white-space:nowrap}.presentation-hint{position:fixed;top:18px;right:20px;z-index:120;display:none;background:rgba(255,255,255,.9);border:1px solid #e5e7eb;border-radius:999px;padding:8px 12px;font-size:11px;font-weight:800;color:#4b5563;backdrop-filter:blur(8px)}.presentation-mode .presentation-hint{display:block}
+.presentation-mode{overflow:hidden;background:#f7f9fc}.presentation-mode .topbar,.presentation-mode .interactive-toolbar,.presentation-mode .footer,.presentation-mode > .container{display:none}.presentation-mode .hero,.presentation-mode .section{position:fixed;inset:0;width:100vw;min-height:100vh;height:100vh;box-sizing:border-box;padding:70px 0 112px;overflow:auto;scroll-margin-top:0;display:block!important;visibility:hidden;opacity:0;pointer-events:none;transform:translate3d(34px,0,0);transition:opacity .38s ease,transform .52s cubic-bezier(.22,.61,.36,1);will-change:transform,opacity}.presentation-mode .hero{align-items:center}.presentation-mode .hero.presentation-active,.presentation-mode .section.presentation-active{visibility:visible;opacity:1;pointer-events:auto;transform:translate3d(0,0,0);z-index:10}.presentation-mode .hero.presentation-active *, .presentation-mode .section.presentation-active *{pointer-events:auto}.presentation-mode .presentation-slide-leaving-next{visibility:visible;opacity:0;pointer-events:none;transform:translate3d(-34px,0,0)!important;z-index:1}.presentation-mode .presentation-slide-leaving-prev{visibility:visible;opacity:0;pointer-events:none;transform:translate3d(34px,0,0)!important;z-index:1}.presentation-mode .presentation-slide-enter-next{transform:translate3d(34px,0,0);}.presentation-mode .presentation-slide-enter-prev{transform:translate3d(-34px,0,0);}.presentation-mode .presentation-slide-inner{max-width:1180px;margin:0 auto}.presentation-controls{display:none;position:fixed;bottom:22px;left:50%;transform:translateX(-50%);z-index:120;background:rgba(255,255,255,.96);border:1px solid #e5e7eb;border-radius:999px;padding:8px;box-shadow:0 14px 50px rgba(0,0,0,.18);gap:6px;align-items:center;backdrop-filter:blur(10px)}.presentation-mode .presentation-controls{display:flex}.presentation-controls button{min-width:44px;height:40px;border:0;border-radius:999px;background:#000099;color:#fff;padding:8px 15px;font-weight:900;cursor:pointer;transition:transform .2s ease,box-shadow .2s ease}.presentation-controls button:hover{transform:translateY(-2px);box-shadow:0 8px 18px rgba(0,0,153,.18)}.presentation-controls button.secondary{background:#edf0f5;color:#000099}.presentation-controls .presentation-counter{padding:0 10px;font-size:12px;font-weight:900;color:#4b5563;white-space:nowrap}.presentation-hint{position:fixed;top:18px;right:20px;z-index:120;display:none;background:rgba(255,255,255,.9);border:1px solid #e5e7eb;border-radius:999px;padding:8px 12px;font-size:11px;font-weight:800;color:#4b5563;backdrop-filter:blur(8px)}.presentation-mode .presentation-hint{display:block}.presentation-controls,.presentation-hint{pointer-events:auto}.presentation-controls *,.presentation-hint *{pointer-events:auto}
 @keyframes insightPulse{0%{box-shadow:0 0 0 0 rgba(255,102,0,.65)}70%{box-shadow:0 0 0 9px rgba(255,102,0,0)}100%{box-shadow:0 0 0 0 rgba(255,102,0,0)}}
 @media(max-width:760px){.interactive-toolbar .toolbar-inner{align-items:flex-start}.toolbar-steps{max-width:70vw}.presentation-btn{font-size:9px;padding:8px}.journey-map{grid-template-columns:1fr 1fr}.journey-step:after{display:none}.insight-ribbon{grid-template-columns:auto 1fr}.insight-ribbon button{grid-column:2}.visual-bar{grid-template-columns:1fr 50px}.visual-bar-track{grid-column:1/2}.visual-bar-value{grid-column:2;grid-row:1/3}.visual-bar-label{grid-column:1}.hero-side{grid-template-columns:1fr 1fr}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}.visual-bar-track i{transition:none}}
@@ -228,7 +231,7 @@ body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;bac
 </style>
 </head>
 <body><div class="float-particle" style="left:12%;top:24%;animation-delay:-1s"></div><div class="float-particle" style="left:84%;top:31%;animation-delay:-3s"></div><div class="float-particle" style="left:72%;top:68%;animation-delay:-5s"></div>
-<header class="topbar"><div class="topbar-inner"><div class="brand"><span class="brand-mark">H</span><span>Diagnóstico • Jornada</span></div>
+<header class="topbar"><div class="topbar-inner"><div class="brand"><span class="brand-mark"><img src="assets/images/hapvida-flor.png" alt="Hapvida"></span><span>Diagnóstico • Jornada</span></div>
 <nav class="nav"><button onclick="scrollToId('grupos')">Grupos de causa</button><button onclick="scrollToId('autonomia')">Autonomias</button><button onclick="scrollToId('explorer')">Registros</button></nav></div></header>
 <div class="interactive-toolbar"><div class="toolbar-inner"><div class="toolbar-steps">
 <button class="step-btn active" onclick="v2Go('grupos')">01 • Dores</button><button class="step-btn" onclick="v2Go('autonomia')">03 • Autonomias</button><button class="step-btn" onclick="v2Go('explorer')">04 • Registros</button>
@@ -458,8 +461,10 @@ function renderUnifiedDores(){
 }
 function focusDor(dor){
  if(document.body.classList.contains('presentation-mode')){
-   const idx=sections.indexOf('autonomia');
-   if(idx>=0){presentationIndex=idx;activatePresentation('next');setAutonomyMode('no',dor);}
+   // Não acessa diretamente variáveis do IIFE do modo apresentação.
+   // v2Go é a API pública responsável por trocar o slide.
+   if(typeof window.v2Go==='function') window.v2Go('autonomia');
+   setAutonomyMode('no',dor);
    return;
  }
  document.getElementById('autonomia')?.scrollIntoView({behavior:'smooth',block:'start'});
@@ -467,8 +472,8 @@ function focusDor(dor){
 }
 function focusResolution(type,dor){
  if(document.body.classList.contains('presentation-mode')){
-   const idx=sections.indexOf('autonomia');
-   if(idx>=0){presentationIndex=idx;activatePresentation('next');setAutonomyMode(type==='nao'?'no':'yes',dor);}
+   if(typeof window.v2Go==='function') window.v2Go('autonomia');
+   setAutonomyMode(type==='nao'?'no':'yes',dor);
    return;
  }
  document.getElementById('autonomia')?.scrollIntoView({behavior:'smooth',block:'start'});
@@ -476,8 +481,7 @@ function focusResolution(type,dor){
 }
 function backToResolution(){
  if(document.body.classList.contains('presentation-mode')){
-   const idx=sections.indexOf('grupos');
-   if(idx>=0){presentationIndex=idx;activatePresentation('prev');}
+   if(typeof window.v2Go==='function') window.v2Go('grupos');
    return;
  }
  document.getElementById('grupos')?.scrollIntoView({behavior:'smooth',block:'start'});
@@ -654,7 +658,21 @@ function scrollToId(id){document.getElementById(id)?.scrollIntoView({behavior:'s
    slides.forEach(s=>{if(s!==current&&s!==nextSlide)s.classList.remove('presentation-slide-leaving-next','presentation-slide-leaving-prev');});
    if(nextSlide){nextSlide.classList.remove('presentation-slide-leaving-next','presentation-slide-leaving-prev');nextSlide.classList.add(direction==='next'?'presentation-slide-enter-next':'presentation-slide-enter-prev');
      void nextSlide.offsetWidth;
-     requestAnimationFrame(()=>{nextSlide.classList.add('presentation-active');nextSlide.classList.remove('presentation-slide-enter-next','presentation-slide-enter-prev');});
+     requestAnimationFrame(()=>{
+       nextSlide.classList.add('presentation-active');
+       nextSlide.classList.remove('presentation-slide-enter-next','presentation-slide-enter-prev');
+       // O Chart.js calcula dimensões quando o canvas está visível.
+       // Ao entrar no modo apresentação, alguns gráficos estavam inicializados
+       // enquanto o slide ainda estava oculto.
+       requestAnimationFrame(()=>{
+         if(window.Chart){
+           document.querySelectorAll('.presentation-active canvas').forEach(canvas=>{
+             const chart=window.Chart.getChart?.(canvas);
+             if(chart){ chart.resize(); chart.update('none'); }
+           });
+         }
+       });
+     });
    }
    updatePresentationCounter();
    setTimeout(()=>{slides.forEach(s=>s.classList.remove('presentation-slide-leaving-next','presentation-slide-leaving-prev'));presentationBusy=false;},560);
